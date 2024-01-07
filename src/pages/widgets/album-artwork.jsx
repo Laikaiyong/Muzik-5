@@ -13,7 +13,6 @@ import {
   ContextMenuTrigger,
 } from "@/components/ui/context-menu"
 
-// import { listenNowAlbums } from "../../data/albums"
 import { playlists } from "../../data/playlists"
 
 export default function AlbumArtwork({
@@ -25,13 +24,13 @@ export default function AlbumArtwork({
   ...props
 }) {
   return (
-    <div className={cn("space-y-3", className)} {...props}>
+    <div key={album?.id ?? ""} className={cn("space-y-3", className)} {...props}>
       <ContextMenu>
         <ContextMenuTrigger>
           <div className="overflow-hidden rounded-md">
             <Image
-              src={album.cover}
-              alt={album.name}
+              src={album?.cover ?? ""}
+              alt={album?.name ?? ""}
               width={width}
               height={height}
               className={cn(
@@ -80,8 +79,8 @@ export default function AlbumArtwork({
         </ContextMenuContent>
       </ContextMenu>
       <div className="space-y-1 text-sm">
-        <h3 className="font-medium leading-none">{album.name}</h3>
-        <p className="text-xs text-muted-foreground">{album.artist}</p>
+        <h3 className="font-medium leading-none">{album?.name ?? ""}</h3>
+        <p className="text-xs text-muted-foreground">{album?.artist ?? ""}</p>
       </div>
     </div>
   )
