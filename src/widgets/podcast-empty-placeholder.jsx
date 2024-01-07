@@ -30,31 +30,31 @@ export default function PodcastEmptyPlaceholder() {
           <path d="M17 18.5a9 9 0 1 0-10 0" />
         </svg>
 
-        <h3 className="mt-4 text-lg font-semibold">No episodes added</h3>
+        <h3 className="mt-4 text-lg font-semibold">No artpieces added</h3>
         <p className="mb-4 mt-2 text-sm text-muted-foreground">
-          You have not added any podcasts. Add one below.
+          You have not added any artpieces. Add one below.
         </p>
         <Dialog>
           <DialogTrigger asChild>
             <Button size="sm" className="relative">
-              Add Podcast
+              Add Artpieces
             </Button>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Add Podcast</DialogTitle>
+              <DialogTitle>Add Artpieces</DialogTitle>
               <DialogDescription>
-                Copy and paste the podcast feed URL to import.
+                Copy and paste the artpiece URL to import.
               </DialogDescription>
             </DialogHeader>
             <div className="grid gap-4 py-4">
               <div className="grid gap-2">
-                <Label htmlFor="url">Podcast URL</Label>
-                <Input id="url" placeholder="https://example.com/feed.xml" />
+                <Label htmlFor="url">Artpiece URL</Label>
+                <Input id="url" placeholder="https://example.com/artpieces.xml" />
               </div>
             </div>
             <DialogFooter>
-              <Button>Import Podcast</Button>
+              <Button>Import Artpiece</Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>

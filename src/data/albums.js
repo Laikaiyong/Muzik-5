@@ -1,35 +1,44 @@
 export const listenNowAlbums = [
 {
     id: 1,
-    name: "React Rendezvous",
-    artist: "Ethan Byte",
+    name: "Colorblind",
+    artist: "Vandyck",
     cover:
-    "https://images.unsplash.com/photo-1611348586804-61bf6c080437?w=300&dpr=2&q=80",
-    description: "",
+    "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "This is a song about color blind",
     price: "$ 100",
     quantity : 3
 },
 {
     id: 2,
-    name: "Async Awakenings",
-    artist: "Nina Netcode",
+    name: "Duck",
+    artist: "Vandyck",
     cover:
-    "https://images.unsplash.com/photo-1468817814611-b7edf94b5d60?w=300&dpr=2&q=80",
+    "https://images.unsplash.com/photo-1582845512747-e42001c95638?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Mini Duck",
+    price: "$ 50",
+    quantity : 20
 
 },
 {
     id: 3,
-    name: "The Art of Reusability",
-    artist: "Lena Logic",
+    name: "Web 5 Poppin",
+    artist: "Vandyck",
     cover:
-    "https://images.unsplash.com/photo-1528143358888-6d3c7f67bd5d?w=300&dpr=2&q=80",
+    "https://images.unsplash.com/photo-1506615111443-10e6dbdbfe41?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Poppin Web 5 Decentralized Vibe",
+    price: "$ 400",
+    quantity : 1
 },
 {
     id: 4,
-    name: "Stateful Symphony",
-    artist: "Beth Binary",
+    name: "ABCD",
+    artist: "Vandyck",
     cover:
-    "https://images.unsplash.com/photo-1490300472339-79e4adc6be4a?w=300&dpr=2&q=80",
+    "https://images.unsplash.com/photo-1617894146454-09969a847eaa?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Song for your kids",
+    price: "$ 30",
+    quantity : 20
 },
 ]
 
@@ -38,6 +47,7 @@ export const madeForYouAlbums = [
     name: "Royalty",
     artist: "Vandyck",
     cover:
-    "https://images.unsplash.com/photo-1615247001958-f4bc92fa6a4a?w=300&dpr=2&q=80",
+    "/muzik5.png",
+    price: "$ 50 per month",
 },
 ]

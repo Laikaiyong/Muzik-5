@@ -24,7 +24,8 @@ export default function AlbumArtwork({
   ...props
 }) {
   return (
-    <div key={album?.id ?? ""} className={cn("space-y-3", className)} {...props}>
+    <a key={album?.id ?? ""} href={"detail?id=" + album?.id ?? ''}>
+    <div className={cn("space-y-3", className)} {...props}>
       <ContextMenu>
         <ContextMenuTrigger>
           <div className="overflow-hidden rounded-md">
@@ -81,7 +82,9 @@ export default function AlbumArtwork({
       <div className="space-y-1 text-sm">
         <h3 className="font-medium leading-none">{album?.name ?? ""}</h3>
         <p className="text-xs text-muted-foreground">{album?.artist ?? ""}</p>
+        <p className="text-xs text-muted-foreground">{album?.price ?? ""}</p>
       </div>
     </div>
+    </a>
   )
 }

@@ -83,6 +83,45 @@ export default function Home() {
     });
   };
 
+   const connectAndCreateRecord = async () => {
+    try {
+      const { web5, did: userDid } = await Web5.connect();
+      const { record } = await web5.dwn.records.create({
+        data: {
+          content: "Hello Web5",
+          description: "Keep Building!"
+        },
+        message: {
+          dataFormat: 'application/json'
+        }
+      });
+      // Handle the created record as needed
+      console.log(record)
+    } catch (error) {
+      // Handle any errors that occur
+      console.error('Error connecting to Web5 or creating record:', error);
+    }
+  };
+
+  const queryDwn = async () => {
+    const { web5, did } = await Web5.connect();
+    const { record } = await web5.dwn.records.query({
+      message: {
+        filter: {
+          recipient: did,
+          recordId:"bafyreift2bmumh6isewd7l6svq45snd6fa5zim2f3vyweox2kzt77a3flu",
+      },
+      },
+    });
+
+    console.log(record)
+  }
+
+  useEffect(() => {
+    connectAndCreateRecord();
+    queryDwn();
+  }, []);
+  
   return (
     <>
       <div className="sm:block">
@@ -122,8 +161,8 @@ export default function Home() {
                               <form onSubmit={handleSubmit}>
                               <div className="grid gap-4 py-4">
                                 <div className="grid grid-cols-4 items-center gap-4">
-                                  <Label htmlFor="albumName" className="text-right">Album Name</Label>
-                                  <Input id="albumName" value={newAlbum.name} onChange={handleChange} placeholder="Album Name" className="col-span-3" />
+                                  <Label htmlFor="name" className="text-right">Album Name</Label>
+                                  <Input id="name" value={newAlbum.name} onChange={handleChange} placeholder="Album Name" className="col-span-3" />
                                 </div>
                                 <div className="grid grid-cols-4 items-center gap-4">
                                   <Label htmlFor="artist" className="text-right">Artist</Label>
@@ -148,9 +187,6 @@ export default function Home() {
                                 <Button type="submit">Save changes</Button>
                               </div>
                             </form>
-                            <DialogFooter>
-                              <Button type="submit">Save changes</Button>
-                            </DialogFooter>
                           </DialogContent>
                         </Dialog>
                       </div>
@@ -165,7 +201,7 @@ export default function Home() {
                             Music Albums
                           </h2>
                           <p className="text-sm text-muted-foreground">
-                            Top picks for you. Updated daily.
+                            Your music albums
                           </p>
                         </div>
                       </div>
@@ -192,7 +228,7 @@ export default function Home() {
                           Royalties
                         </h2>
                         <p className="text-sm text-muted-foreground">
-                          Your personal playlists. Updated daily.
+                          Your royalty pass
                         </p>
                       </div>
                       <Separator className="my-4" />
@@ -221,10 +257,10 @@ export default function Home() {
                       <div className="flex items-center justify-between">
                         <div className="space-y-1">
                           <h2 className="text-2xl font-semibold tracking-tight">
-                            New Episodes
+                            New Art
                           </h2>
                           <p className="text-sm text-muted-foreground">
-                            Your favorite podcasts. Updated daily.
+                            Your favorite artpieces. Updated daily.
                           </p>
                         </div>
                       </div>
