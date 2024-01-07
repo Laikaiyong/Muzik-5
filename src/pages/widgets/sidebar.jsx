@@ -2,9 +2,9 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 
-import { Playlist } from "../data/playlists"
+// import { Playlist } from "../data/playlists"
 
-export function Sidebar({ className, playlists }) {
+export default function Sidebar({ className, playlists }) {
   return (
     <div className={cn("pb-12", className)}>
       <div className="space-y-4 py-4">

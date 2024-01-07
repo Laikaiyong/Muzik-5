@@ -13,10 +13,10 @@ import {
   ContextMenuTrigger,
 } from "@/components/ui/context-menu"
 
-import { Album } from "../data/albums"
-import { playlists } from "../data/playlists"
+import { Album } from "../../data/albums"
+import { playlists } from "../../data/playlists"
 
-export function AlbumArtwork({
+export default function AlbumArtwork({
   album,
   aspectRatio = "portrait",
   width,

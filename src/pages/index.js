@@ -28,12 +28,12 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
 
-import { AlbumArtwork } from "./widgets/album-artwork"
-import { Menu } from "./widgets/menu"
-import { PodcastEmptyPlaceholder } from "./widgets/podcast-empty-placeholder"
-import { Sidebar } from "./widgets/sidebar"
-import { listenNowAlbums, madeForYouAlbums } from "./data/albums"
-import { playlists } from "./data/playlists"
+import AlbumArtwork from "./widgets/album-artwork"
+import Menu from "./widgets/menu"
+import PodcastEmptyPlaceholder from "./widgets/podcast-empty-placeholder"
+import Sidebar from "./widgets/sidebar"
+import { listenNowAlbums, madeForYouAlbums } from "../data/albums"
+import { playlists } from "../data/playlists"
 
 export const metadata = {
   title: "Music App",
