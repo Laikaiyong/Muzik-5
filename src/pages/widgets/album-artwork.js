@@ -13,7 +13,7 @@ import {
   ContextMenuTrigger,
 } from "@/components/ui/context-menu"
 
-import { Album } from "../../data/albums"
+// import { listenNowAlbums } from "../../data/albums"
 import { playlists } from "../../data/playlists"
 
 export default function AlbumArtwork({
