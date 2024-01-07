@@ -83,25 +83,7 @@ export default function Home() {
     });
   };
 
-   const connectAndCreateRecord = async () => {
-    try {
-      const { web5, did: userDid } = await Web5.connect();
-      const { record } = await web5.dwn.records.create({
-        data: {
-          content: "Hello Web5",
-          description: "Keep Building!"
-        },
-        message: {
-          dataFormat: 'application/json'
-        }
-      });
-      // Handle the created record as needed
-      console.log(record)
-    } catch (error) {
-      // Handle any errors that occur
-      console.error('Error connecting to Web5 or creating record:', error);
-    }
-  };
+   
 
   const queryDwn = async () => {
     const { web5, did } = await Web5.connect();
@@ -109,7 +91,6 @@ export default function Home() {
       message: {
         filter: {
           recipient: did,
-          recordId:"bafyreift2bmumh6isewd7l6svq45snd6fa5zim2f3vyweox2kzt77a3flu",
       },
       },
     });
@@ -118,9 +99,26 @@ export default function Home() {
   }
 
   useEffect(() => {
+    const connectAndCreateRecord = async () => {
+    try {
+      const { web5, did: userDid } = await Web5.connect();
+      const { record } = await web5.dwn.records.create({
+      data: {
+        newAlbum,
+      },
+      message: {
+        dataFormat: 'application/json',
+      },
+    });
+      console.log(record)
+    } catch (error) {
+      // Handle any errors that occur
+      console.error('Error connecting to Web5 or creating record:', error);
+    }
+  };
     connectAndCreateRecord();
     queryDwn();
-  }, []);
+  }, [newAlbum]);
   
   return (
     <>
