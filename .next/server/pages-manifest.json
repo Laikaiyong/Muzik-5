@@ -1,1 +1,6 @@
-{"/_app":"pages/_app.js","/_error":"pages/_error.js","/_document":"pages/_document.js","/api/hello":"pages/api/hello.js","/detail":"pages/detail.html","/widgets/album-artwork":"pages/widgets/album-artwork.html","/widgets/menu":"pages/widgets/menu.html","/widgets/podcast-empty-placeholder":"pages/widgets/podcast-empty-placeholder.html","/widgets/sidebar":"pages/widgets/sidebar.html","/":"pages/index.html","/404":"pages/404.html"}
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js"
+}
